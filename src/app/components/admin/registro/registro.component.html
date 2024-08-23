@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Formulario Registro</title>
+    <link rel="stylesheet" href="registro.component.css">
+  </head>
+  <body>
+    <div>
+      <button class="volver" routerLink='/login'>Volver</button>
+    </div>
+    <section class="form-login">
+      <h5>Regístrate</h5>
+      <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div> <!-- Mostrar mensaje de error -->
+      <input class="controls" [(ngModel)]="usuario.nombre" type="text" name="usuario" placeholder="Usuario">
+      <input class="controls" [(ngModel)]="usuario.email" type="email" name="usuario" placeholder="Correo Electrónico">
+      <input class="controls" [(ngModel)]="usuario.password" type="password" name="contrasena" placeholder="Contraseña">
+      <input class="buttons" type="submit" value="Ingresar" (click)="saveNewUsuario()">
+    </section>
+  </body>
+</html>

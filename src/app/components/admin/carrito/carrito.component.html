@@ -1,0 +1,13 @@
+<div class="carrito-container">
+  <i class="fa-solid fa-basket-shopping"  routerLink='/carrito-vista'></i>
+  <h2>Carrito</h2>
+  <ul>
+    <li *ngFor="let item of items$ | async; let i = index">
+      {{ item.nombre }} - ${{ item.precio_unitario }} x {{ item.cantidad }}
+      <button (click)="actualizarCantidad(item.id, item.cantidad - 1)">-</button>
+      <button (click)="actualizarCantidad(item.id, item.cantidad + 1)">+</button>
+      <button (click)="eliminarDelCarrito(i)">Eliminar</button>
+    </li>
+  </ul>
+  <button (click)="vaciarCarrito()">Vaciar Carrito</button>
+</div>

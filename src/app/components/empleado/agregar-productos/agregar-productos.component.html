@@ -1,0 +1,66 @@
+<div class="container-navbar">
+    <nav class="navbar container">
+        <i class="fa-solid fa-bars"></i>
+        <ul class="menu">
+            <li><a routerLink="/pantalla-principal-em">Inicio</a></li>
+            <li><a routerLink="/productos">Productos</a></li>
+            <li><a routerLink="/gestion-ventas-em">Historial de ventas</a></li>
+            <li><a routerLink="/agregar-product">Agregar productos</a></li>
+        </ul>
+
+    </nav>
+    
+</div>
+
+<div class="col-md-4 offset-md-2">
+    <div class="card">
+        <div class="card-body">
+            <form>
+                <div *ngIf="errorMessage" class="alert alert-danger">{{ errorMessage }}</div> <!-- Mostrar mensaje de error -->
+                <div class="form-group">
+                    <input type="text" name="tiltle" [(ngModel)]="producto.nombre" placeholder="Title"
+                        class="form-control" autofocus>
+                </div>
+
+                <div class="form-group">
+                    <input min="0" type="number" name="stock" [(ngModel)]="producto.stock" placeholder="stock" class="form-control"
+                        rows=2>
+                </div>
+
+                <div class="form-group">
+                    <label for="id_categoria">Categoría</label>
+                    <select name="id_categoria" [(ngModel)]="producto.id_categoria" class="form-control" id="id_categoria">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <textarea type="number" name="precio" [(ngModel)]="producto.precio_unitario" placeholder="precio"
+                        class="form-control" rows=2></textarea>
+                </div>
+
+                <div class="form-group">
+                    <input type="url" name="image" [(ngModel)]="producto.imagen" placeholder="Imagen"
+                        class="form-control">
+                </div>
+                <br>
+                <button class="btn btn-success btn-block" (click)="edit ? updateProducto() : saveNewProducto()">Save</button>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="col-md-4">
+    <div class="card card-body text-center">
+        <div class="card card-body" text-center>
+            <img [src]="producto.imagen==''?'/assets/NoImagen.png':producto.imagen" class="card-img-top" />
+            <h3>{{producto.nombre ==''?'Titulo del producto':producto.nombre}}</h3>
+            <p>{{producto.stock ==''?'Escribe tu stock':producto.stock}}</p>
+            <p>{{producto.id_categoria ==''?'Escribe la categoria del producto':producto.id_categoria}}</p>
+            <p>{{producto.precio_unitario ==''?'Escribe el precio':producto.precio_unitario}}</p>
+            <p>{{producto.created_at | date: 'yyyy-MM-dd'}}</p>
+        </div>
+    </div>
+</div>

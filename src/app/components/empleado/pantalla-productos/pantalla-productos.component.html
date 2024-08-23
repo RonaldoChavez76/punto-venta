@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<header>
+  <div class="container-navbar">
+    <nav class="navbar container">
+      <i class="fa-solid fa-bars"></i>
+      <ul class="menu">
+        <li><a routerLink="/pantalla-principal-em">Inicio</a></li>
+        <li><a routerLink="/productos/1">Bebidas</a></li>
+        <li><a routerLink="/productos/2">Sabritas</a></li>
+        <li><a routerLink="/productos/3">Galletas</a></li>
+        <li><a routerLink="/productos/4">Limpieza</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<body>
+  <main class="main-content">
+  <section class="container top-products">
+    <h1 class="heading-1">Los Mejores Productos Al Mejor Precio</h1>
+
+    <div class="container-products">
+  <div class="card-product" style="height: 670px;"  *ngFor="let producto of productos">
+    <button class="btn btn-danger" (click)="deleteProducto(producto.id)">
+      <i class="far fa-trash-alt"></i>
+    </button>
+    
+    <div class="container-img">
+      <img [src]="producto.imagen" style="height: 350px;" />
+      <div class="button-group">
+        <span>
+          <i class="fa-regular fa-eye"></i>
+        </span>
+        <span>
+          <i class="fa-regular fa-heart"></i>
+        </span>
+        <span>
+          <i class="fa-solid fa-code-compare"></i>
+        </span>
+      </div>
+    </div>
+    <div class="content-card-product">
+      
+      <h3>{{producto.nombre}}</h3>
+      <h4>Stock:{{producto.stock}}</h4>
+      
+      <span class="add-cart" (click)="agregarAlCarrito(producto)">
+        <i class="fa-solid fa-basket-shopping"></i>
+      </span>
+      <p class="price">${{producto.precio_unitario}}</p>
+      <a href="" [routerLink]="['/form-products/edit', producto.id]"  class="btn btn-info btn-block">EDIT Product</a>
+    </div>
+  </div>
+  </div>
+  </section>
+  </main>
+
+  
+
+  
+</body>
+</html>

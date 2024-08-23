@@ -1,0 +1,193 @@
+.container-navbar {
+	background-color: #1919e6;
+	
+	
+}
+
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 0;
+	display: flex;
+	justify-content: space-around;
+}
+
+.navbar .fa-bars {
+	display: none;
+}
+
+.menu {
+	display: flex;
+	gap: 2rem;
+}
+
+.menu li {
+	list-style: none;
+}
+
+.menu a {
+	text-decoration: none;
+	font-size: 1.3rem;
+	color: #151515;
+	font-weight: 600;
+	text-transform: uppercase;
+	position: relative;
+}
+
+.menu a::after {
+	content: '';
+	width: 1.5rem;
+	margin-left: 60px;
+	height: 1px;
+	display: flex;
+	justify-content: space-around;
+	background-color: #fff;
+	position: absolute;
+	bottom: -3px;
+	left: 50%;
+	transform: translate(-50%, 50%);
+	opacity: 0;
+	transition: all 0.3s ease;
+}
+
+.menu a:hover::after {
+	opacity: 1;
+}
+
+.menu a:hover {
+	color: #fff;
+}
+
+/* Estilo general */
+body {
+    background-color: #f2f9ff; /* Fondo azul muy claro */
+    color: #333333; /* Texto gris oscuro para un contraste adecuado */
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Estilo del encabezado */
+  h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #003366; /* Azul oscuro profesional */
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 51, 102, 0.2); /* Sombra en el texto para mayor profundidad */
+  }
+  
+  /* Estilo del formulario */
+  form {
+    background-color: #ffffff; /* Fondo blanco para el formulario */
+    border: 2px solid #003366; /* Borde azul oscuro */
+    border-radius: 15px;
+    padding: 25px;
+    max-width: 500px;
+    margin: 0 auto;
+    box-shadow: 0px 0px 20px rgba(0, 51, 102, 0.2); /* Sombra con un toque azul oscuro */
+  }
+  
+  /* Grupos de formulario */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    color: #003366; /* Azul oscuro */
+  }
+  
+  /* Entradas de formulario */
+  .form-input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 2px solid #0066cc; /* Borde azul más brillante */
+    background-color: #e6f0ff; /* Fondo azul muy claro */
+    color: #003366; /* Texto azul oscuro */
+    font-size: 1.1rem;
+    transition: border-color 0.3s ease;
+  }
+  
+  /* Efecto hover en las entradas */
+  .form-input:hover, .form-input:focus {
+    border-color: #004080; /* Azul más oscuro en foco */
+  }
+  
+  /* Botón de enviar */
+  .submit-button, .logout-button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 4px 8px rgba(0, 51, 102, 0.2); /* Sombra con un toque azul oscuro */
+  }
+  
+  /* Botón de enviar */
+  .submit-button {
+    background-color: #003366; /* Azul oscuro */
+    color: #ffffff; /* Texto blanco */
+  }
+  
+  .submit-button:hover {
+    background-color: #002244; /* Azul aún más oscuro */
+    box-shadow: 0px 6px 12px rgba(0, 34, 68, 0.3); /* Sombra más pronunciada */
+  }
+  
+  /* Botón de cerrar sesión */
+  .logout-button {
+    background-color: #0099cc; /* Azul más brillante */
+    color: #ffffff; /* Texto blanco */
+    margin-top: 10px; /* Espaciado entre los botones */
+  }
+  
+  .logout-button:hover {
+    background-color: #0077b3; /* Azul más oscuro */
+    box-shadow: 0px 6px 12px rgba(0, 51, 102, 0.3); /* Sombra más pronunciada */
+  }
+
+  /* Adaptaciones para móvil */
+@media (max-width: 768px) {
+  .navbar {
+      justify-content: space-between;
+  }
+  
+  /* Ocultar el menú por defecto en móviles */
+  .menu {
+      display: none;
+      flex-direction: column;
+      background-color: #1919e6;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+  }
+  
+  .menu li {
+      text-align: center;
+      padding: 1rem 0;
+  }
+  
+  /* Mostrar el ícono de menú (hamburger) */
+  .navbar .fa-bars {
+      display: block;
+      font-size: 2.5rem;
+      color: #fff;
+      cursor: pointer;
+  }
+  
+  /* Cuando el menú está desplegado */
+  .menu.active {
+      display: flex;
+  }
+}
+
+
+
+  

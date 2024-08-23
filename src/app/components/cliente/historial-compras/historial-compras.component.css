@@ -1,0 +1,202 @@
+/* Contenedor de las tarjetas */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espacio entre tarjetas */
+    justify-content: center;
+    padding: 20px;
+    background-color: #f0f4f8; /* Fondo suave para el contenedor */
+  }
+  
+  /* Estilo de cada tarjeta */
+  .card {
+    background-color: white;
+    border: 1px solid #001f3f; /* Borde azul marino */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px; /* Ancho fijo de la tarjeta */
+    box-sizing: border-box;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  /* Efecto al pasar el ratón sobre la tarjeta */
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Título de la tarjeta */
+  .card-title {
+    color: #001f3f; /* Azul marino */
+    font-family: Arial, sans-serif;
+    margin-bottom: 10px;
+  }
+  
+  /* Fecha en la tarjeta */
+  .card-date {
+    color: #003366; /* Azul marino oscuro */
+    font-family: Arial, sans-serif;
+    margin-bottom: 15px;
+  }
+  
+  /* Lista de detalles en la tarjeta */
+  .card-details {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .card-details li {
+    padding: 8px;
+    border-bottom: 1px solid #e0e0e0;
+    color: #00264d; /* Azul marino suave */
+    font-family: Arial, sans-serif;
+  }
+  
+  .card-details li:last-child {
+    border-bottom: none;
+  }
+
+
+/*Barra de navegacion*/
+
+.container-navbar {
+	background-color: #1919e6;
+	
+	
+}
+
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 0;
+	display: flex;
+	justify-content: space-around;
+}
+
+.navbar .fa-bars {
+	display: none;
+}
+
+.menu {
+	display: flex;
+	gap: 2rem;
+}
+
+.menu li {
+	list-style: none;
+}
+
+.menu a {
+	text-decoration: none;
+	font-size: 1.3rem;
+	color: #151515;
+	font-weight: 600;
+	text-transform: uppercase;
+	position: relative;
+}
+
+.menu a::after {
+	content: '';
+	width: 1.5rem;
+	margin-left: 60px;
+	height: 1px;
+	display: flex;
+	justify-content: space-around;
+	background-color: #fff;
+	position: absolute;
+	bottom: -3px;
+	left: 50%;
+	transform: translate(-50%, 50%);
+	opacity: 0;
+	transition: all 0.3s ease;
+}
+
+.menu a:hover::after {
+	opacity: 1;
+}
+
+.menu a:hover {
+	color: #fff;
+}
+
+.search-form {
+	position: relative;
+	display: flex;
+	align-items: center;
+	border: 2px solid #1919e6;
+	border-radius: 2rem;
+	background-color: #fff;
+	height: 4.4rem;
+	overflow: hidden;
+}
+
+.search-form input {
+	outline: none;
+	font-family: inherit;
+	border: none;
+	width: 25rem;
+	font-size: 1.4rem;
+	padding: 0 2rem;
+	color: #777;
+	cursor: pointer;
+}
+
+.search-form input::-webkit-search-cancel-button {
+	appearance: none;
+}
+
+.search-form .btn-search {
+	border: none;
+	background-color: #1919e6;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	padding: 1rem;
+}
+
+.btn-search i {
+	font-size: 2rem;
+	color: #fff;
+}
+  
+
+/* Adaptaciones para móvil */
+@media (max-width: 768px) {
+    .navbar {
+        justify-content: space-between;
+    }
+    
+    /* Ocultar el menú por defecto en móviles */
+    .menu {
+        display: none;
+        flex-direction: column;
+        background-color: #1919e6;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+    
+    .menu li {
+        text-align: center;
+        padding: 1rem 0;
+    }
+    
+    /* Mostrar el ícono de menú (hamburger) */
+    .navbar .fa-bars {
+        display: block;
+        font-size: 2.5rem;
+        color: #fff;
+        cursor: pointer;
+    }
+    
+    /* Cuando el menú está desplegado */
+    .menu.active {
+        display: flex;
+    }
+}

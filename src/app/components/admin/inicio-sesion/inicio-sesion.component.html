@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Formulario Login</title>
+    <link rel="stylesheet" href="inicio-sesion.component.css">
+  </head>
+  <body>
+    <div>
+    <button class="volver" routerLink='/pantalla-principal-inv'>Volver</button>
+    </div>
+    <section class="form-login">
+      <h5>Inicio de sesion</h5>
+      <input class="controls" type="email" name="usuario" [(ngModel)]="email" placeholder="Correo Electronico">
+      <input class="controls" type="password" name="contrasena" [(ngModel)]="password" placeholder="Contraseña">
+      <input class="buttons" type="button" name="" value="Ingresar" (click)="onLogin()">
+      <p><a routerLink="/registro">Registrate aqui</a></p>
+    </section>
+    
+
+  </body>
+</html>

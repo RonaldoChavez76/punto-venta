@@ -1,0 +1,54 @@
+.carrito-container {
+  position: fixed; /* Mantiene el carrito fijo mientras se desplaza la página */
+  top: 10px; /* Distancia desde la parte superior de la pantalla */
+  right: 10px; /* Distancia desde el lado derecho de la pantalla */
+  width: 300px; /* Ancho del contenedor del carrito */
+  background-color: #f8f9fa; /* Color de fondo del contenedor */
+  padding: 20px; /* Espaciado interno del contenedor */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+  border-radius: 8px; /* Bordes redondeados */
+  z-index: 1000; /* Asegura que el carrito esté por encima de otros elementos */
+  display: flex; /* Utiliza flexbox para alinear elementos */
+  flex-direction: column; /* Alinea los elementos en columna */
+}
+
+.carrito-container .icon-text {
+  display: flex; /* Utiliza flexbox para alinear el icono y el texto */
+  align-items: center; /* Alinea verticalmente el icono y el texto */
+  justify-content: space-between; /* Coloca el icono a la derecha del texto */
+  margin-bottom: 20px; /* Espaciado entre el icono/texto y la lista */
+}
+
+.carrito-container .fa-basket-shopping {
+  font-size: 3rem; /* Tamaño del icono */
+  color: #1919e6; /* Color del icono */
+}
+
+.carrito-container h2 {
+  margin: 0; /* Elimina el margen del título */
+  flex-grow: 1; /* Permite que el título ocupe el espacio disponible */
+}
+
+.carrito-container ul {
+  list-style-type: none; /* Elimina los puntos de la lista */
+  padding: 0; /* Elimina el padding del ul */
+  margin: 0; /* Elimina el margen del ul */
+}
+
+.carrito-container li {
+  margin-bottom: 10px; /* Espaciado entre los elementos del carrito */
+}
+
+.carrito-container button {
+  background-color: #dc3545; /* Color de fondo rojo para el botón */
+  color: white; /* Color del texto del botón */
+  border: none; /* Elimina el borde del botón */
+  padding: 5px 10px; /* Espaciado interno del botón */
+  border-radius: 4px; /* Bordes redondeados del botón */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+.carrito-container button:hover {
+  background-color: #c82333; /* Cambia el color al pasar sobre el botón */
+}
+

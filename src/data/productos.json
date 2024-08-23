@@ -1,0 +1,36 @@
+{
+  "productos": [
+    {
+      "id": "1",
+      "title": "Pepsi",
+      "precio": "17.00",
+      "stock": "50",
+      "image": "https://www.shutterstock.com/image-photo/konotop-ukraine-march-13-2016-260nw-389825848.jpg",
+      "created_at": "28/06/2024"
+    },
+    {
+      "id": "2",
+      "title": "Rufles",
+      "precio": "20.00",
+      "stock": "50",
+      "image": "https://www.convy-gdl.mx/cdn/shop/products/7500478007981_800x.png?v=1678994518",
+      "created_at": "28/06/2024"
+    },
+    {
+      "id": 0,
+      "title": "Emperador Piruetas",
+      "stock": "200",
+      "precio": "18.00",
+      "image": "https://www.gamesacookies.com/sites/gamesa.com/files/2022-04/emperador-lemon-big-v2.png",
+      "created_at": "2024-07-29T04:22:53.323Z"
+    },
+    {
+      "id": 0,
+      "title": "Fresca",
+      "stock": "200",
+      "precio": "17.00",
+      "image": "https://coca-colafemsa.com/wp-content/uploads/2020/02/2-5.png",
+      "created_at": "2024-07-29T04:22:53.323Z"
+    }
+  ]
+}

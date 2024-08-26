@@ -1,16 +1,4 @@
-<div class="container-navbar">
-    <nav class="navbar container">
-        <i class="fa-solid fa-bars"></i>
-        <ul class="menu">
-            <li><a routerLink="/pantalla-principal-em">Inicio</a></li>
-            <li><a routerLink="/productos">Productos</a></li>
-            <li><a routerLink="/gestion-ventas-em">Historial de ventas</a></li>
-            <li><a routerLink="/agregar-product">Agregar productos</a></li>
-        </ul>
-
-    </nav>
-    
-</div>
+<app-empleado-bar></app-empleado-bar>
 
 <div class="col-md-4 offset-md-2">
     <div class="card">
@@ -18,7 +6,7 @@
             <form>
                 <div *ngIf="errorMessage" class="alert alert-danger">{{ errorMessage }}</div> <!-- Mostrar mensaje de error -->
                 <div class="form-group">
-                    <input type="text" name="tiltle" [(ngModel)]="producto.nombre" placeholder="Title"
+                    <input type="text" name="tiltle" [(ngModel)]="producto.nombre" placeholder="Nombre"
                         class="form-control" autofocus>
                 </div>
 

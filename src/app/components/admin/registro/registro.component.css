@@ -1,81 +1,105 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: arial;
-    background-image: url('/assets/pagos/bg.png');
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: arial;
+  background-image: url('/assets/pagos/bg.png');
+  background-size: cover; /* Asegura que la imagen de fondo cubra toda la pantalla */
+  background-position: center; /* Centra la imagen de fondo */
+}
+
+.form-login {
+  width: 90%; /* Reduce el ancho para pantallas pequeñas */
+  max-width: 400px; /* Mantén el ancho máximo en 400px para pantallas más grandes */
+  height: auto;
+  background: #4e4d4d;
+  margin: 20px auto; /* Ajusta el margen para pantallas pequeñas */
+  box-shadow: 7px 13px 37px #000;
+  padding: 20px 30px;
+  border-top: 4px solid #017bab;
+  color: white;
+  border-radius: 8px; /* Añade bordes redondeados */
+}
+
+.form-login h5 {
+  margin: 0;
+  text-align: center;
+  margin-bottom: 30px;
+  border-bottom: 1px solid;
+  font-size: 20px;
+}
+
+.controls {
+  width: 100%;
+  border: 1px solid #017bab;
+  margin-bottom: 15px;
+  padding: 11px 10px;
+  background: #fdfdfd;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 4px; /* Añade bordes redondeados */
+}
+
+.buttons {
+  width: 100%;
+  height: 40px;
+  background: #017bab;
+  border: none;
+  color: white;
+  margin-bottom: 16px;
+  cursor: pointer; /* Cambia el cursor cuando se pasa por encima */
+  border-radius: 4px; /* Añade bordes redondeados */
+}
+
+.volver {
+  width: 90%; /* Ajusta el ancho para pantallas pequeñas */
+  max-width: 120px; /* Mantén un tamaño manejable en pantallas más grandes */
+  height: 40px;
+  background: #017bab;
+  border: none;
+  color: white;
+  margin-bottom: 16px;
+  cursor: pointer;
+  border-radius: 4px; /* Añade bordes redondeados */
+  display: block;
+  margin-left: auto; /* Centra el botón horizontalmente */
+  margin-right: auto;
+}
+
+.form-login p {
+  height: 40px;
+  text-align: center;
+  border-bottom: 1px solid;
+}
+
+.form-login a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.form-login a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 480px) {
   .form-login {
-    width: 400px;
-    height: 380px;
-    background: #4e4d4d;
-    margin: auto;
-    margin-top: 180px;
-    box-shadow: 7px 13px 37px #000;
-    padding: 20px 30px;
-    border-top: 4px solid #017bab;
-    color: white;
+    padding: 15px 20px; /* Reduce el padding en pantallas muy pequeñas */
   }
-  
+
   .form-login h5 {
-    margin: 0;
-    text-align: center;
-    height: 40px;
-    margin-bottom: 30px;
-    border-bottom: 1px solid;
-    font-size: 20px;
+    font-size: 18px; /* Ajusta el tamaño de la fuente para pantallas pequeñas */
   }
-  
+
   .controls {
-    width: 100%;
-    border: 1px solid #017bab;
-    margin-bottom: 15px;
-    padding: 11px 10px;
-    background: #fdfdfd;
-    font-size: 14px;
-    font-weight: bold;
-  }
-  
-  .buttons {
-    width: 100%;
-    height: 40px;
-    background: #017bab;
-    border: none;
-    color: white;
-    margin-bottom: 16px;
+    font-size: 12px; /* Reduce el tamaño de la fuente para controles en pantallas pequeñas */
   }
 
-  .volver{
-    width: 5%;
-    height: 40px;
-    background: #017bab;
-    border: none;
-    color: white;
-    margin-bottom: 16px;
+  .buttons, .volver {
+    font-size: 12px; /* Ajusta el tamaño del texto de los botones */
+    height: 35px; /* Reduce ligeramente la altura de los botones */
   }
-
-  .volver a{
-    color: white;
-    text-decoration: none;
-    font-size: 14px;
-  }
-  
-  .form-login p{
-    height: 40px;
-    text-align: center;
-    border-bottom: 1px solid;
-  }
-  
-  .form-login a {
-    color: white;
-    text-decoration: none;
-    font-size: 14px;
-  }
-  
-  .form-login a:hover {
-    text-decoration: underline;
-  }
+}

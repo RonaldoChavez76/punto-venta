@@ -15,31 +15,31 @@ export class PantallaProductosComponent {
 
   constructor(private productosService:ProductosService, private activatedRoute : ActivatedRoute, private carritoService : CarritoService){}
 
-  ngOnInit(){
-    this.getProductos();  //Carga los productos al iniciar la página
-    this.getProductosCat();
+  ngOnInit(): void {
+    this.activatedRoute.paramMap.subscribe(params => {
+      const idC = params.get('idC');
+      if (idC) {
+        this.getProductos(idC);
+      } else {
+        this.getProductos();
+      }
+    });
   }
+  
 
-
-
-  getProductos(){
-    this.productosService.getProductos().subscribe(
-      resp => {
-        this.productos = resp
-      },//console.log(resp),
-      err => console.log(err)
-    );
-  }
-    getProductosCat(){
-      const idC = this.activatedRoute.snapshot.paramMap.get('idC');
-      if(idC){
+  getProductos(idC?: string): void {
+    if (idC) {
       this.productosService.getProductosPorCategoria(idC).subscribe(
-        resp => {
-          this.productos = resp
-        },//console.log(resp),
+        resp => this.productos = resp,
         err => console.log(err)
-      )}
-}
+      );
+    } else {
+      this.productosService.getProductos().subscribe(
+        resp => this.productos = resp,
+        err => console.log(err)
+      );
+    }
+  }
 
 deleteProducto(id: string) {
   console.log(id);

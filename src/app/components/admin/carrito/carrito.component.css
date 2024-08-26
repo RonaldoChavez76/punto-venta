@@ -52,3 +52,77 @@
   background-color: #c82333; /* Cambia el color al pasar sobre el botón */
 }
 
+/* Estilos generales para todos los dispositivos */
+.carrito-container {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  width: 300px;
+  background-color: #f8f9fa;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilos para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+  .carrito-container {
+    top: auto;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    border-radius: 0; /* Elimina los bordes redondeados */
+    padding: 15px; /* Reduce el padding */
+  }
+
+  .carrito-container h2 {
+    font-size: 1.5rem; /* Reduce el tamaño de la fuente del título */
+    text-align: center; /* Centra el título */
+  }
+
+  .carrito-container ul {
+    max-height: 200px; /* Limita la altura máxima de la lista */
+    overflow-y: auto; /* Habilita el desplazamiento vertical si es necesario */
+  }
+
+  .carrito-container button {
+    padding: 10px; /* Aumenta el padding de los botones */
+    font-size: 1rem; /* Aumenta el tamaño de la fuente del botón */
+  }
+
+  .carrito-container li {
+    font-size: 0.9rem; /* Reduce el tamaño de la fuente en los elementos de la lista */
+    display: flex; /* Usa flexbox para organizar los elementos */
+    justify-content: space-between; /* Espacia los botones y el texto */
+    align-items: center; /* Centra verticalmente los botones y el texto */
+  }
+
+  .carrito-container li button {
+    flex: 1; /* Los botones ocupan un mayor espacio */
+    margin-left: 5px; /* Añade margen entre los botones */
+  }
+}
+
+/* Estilos para pantallas muy pequeñas (moviles en modo vertical) */
+@media (max-width: 480px) {
+  .carrito-container {
+    padding: 10px; /* Reduce aún más el padding */
+  }
+
+  .carrito-container h2 {
+    font-size: 1.2rem; /* Ajusta el tamaño del título */
+  }
+
+  .carrito-container li {
+    font-size: 0.8rem; /* Reduce un poco más el tamaño de la fuente en los elementos de la lista */
+  }
+
+  .carrito-container button {
+    padding: 8px; /* Ajusta el padding de los botones */
+  }
+}
+

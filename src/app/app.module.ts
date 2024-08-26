@@ -36,6 +36,14 @@ import { UserProfileEmComponent } from './components/empleado/user-profile-em/us
 import { PantallaPrincipalProvComponent } from './components/proveedor/pantalla-principal-prov/pantalla-principal-prov.component';
 import { ProductosProvComponent } from './components/proveedor/productos-prov/productos-prov.component';
 import { UserProfileProvComponent } from './components/proveedor/user-profile-prov/user-profile-prov.component';
+import { AdminBarComponent } from './components/navbars/admin-bar/admin-bar.component';
+import { ClientBarComponent } from './components/navbars/client-bar/client-bar.component';
+import { EmpleadoBarComponent } from './components/navbars/empleado-bar/empleado-bar.component';
+import { ProvBarComponent } from './components/navbars/prov-bar/prov-bar.component';
+import { AdminProdComponent } from './components/navbars/admin-prod/admin-prod.component';
+import { ClientProdComponent } from './components/navbars/client-prod/client-prod.component';
+import { EmpleadoProdComponent } from './components/navbars/empleado-prod/empleado-prod.component';
+import { ProvProdComponent } from './components/navbars/prov-prod/prov-prod.component';
 
 
 
@@ -68,7 +76,15 @@ import { UserProfileProvComponent } from './components/proveedor/user-profile-pr
     UserProfileEmComponent,
     PantallaPrincipalProvComponent,
     ProductosProvComponent,
-    UserProfileProvComponent
+    UserProfileProvComponent,
+    AdminBarComponent,
+    ClientBarComponent,
+    EmpleadoBarComponent,
+    ProvBarComponent,
+    AdminProdComponent,
+    ClientProdComponent,
+    EmpleadoProdComponent,
+    ProvProdComponent
    
   ],
   imports: [

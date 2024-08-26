@@ -1,13 +1,4 @@
-<div class="container-navbar">
-    <nav class="navbar container">
-        <i class="fa-solid fa-bars"></i>
-        <ul class="menu">
-            <li><a routerLink="/pantalla-principal-user">Inicio</a></li>
-            <li><a routerLink="/productos-user">Productos</a></li>
-        </ul>
-
-    </nav>
-</div>
+<app-client-bar></app-client-bar>
 
 <div class="container-items">
 <div *ngFor="let item of items$ | async; let i = index">

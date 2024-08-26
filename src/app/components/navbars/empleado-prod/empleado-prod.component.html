@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Ventas RMA</title>
+	
+</head>
+
+<body>
+	<header>
+		<div class="container-hero">
+			<div class="container hero">
+				<div class="customer-support">
+					<i class="fa-solid fa-headset"></i>
+					<div class="content-customer-support">
+						<span class="text">Soporte al cliente</span>
+						<span class="number">123-456-7890</span>
+					</div>
+				</div>
+
+				<div class="container-logo">
+					<i class="fa fa-shopping-bag"></i>
+					<h1 class="logo"><a href="/">Ventas RAC</a></h1>
+				</div>
+
+				<div class="container-user">
+					<i class="fa-solid fa-user" routerLink='/perfil-em'></i>
+					<div class="content-shopping-cart"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container-navbar">
+			<nav class="navbar container">
+				<input type="checkbox" id="menu-toggle" />
+				<label for="menu-toggle" class="menu-icon">
+					<i class="fa-solid fa-bars"></i>
+				</label>
+				<ul class="menu">
+                    <li><a [routerLink]="['/pantalla-principal-em']">Inicio</a></li>
+                    <li><a [routerLink]="['/productos']">Productos</a></li>
+                    <li><a [routerLink]="['/productos', 1]">Bebidas</a></li>
+                    <li><a [routerLink]="['/productos', 2]">Sabritas</a></li>
+                    <li><a [routerLink]="['/productos', 3]">Galletas</a></li>
+                    <li><a [routerLink]="['/productos', 4]">Limpieza</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+</body>
+</html>

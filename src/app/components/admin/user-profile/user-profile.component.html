@@ -1,16 +1,4 @@
-<div class="container-navbar">
-  <nav class="navbar container">
-    <i class="fa-solid fa-bars" id="menu-toggle"></i>
-    <ul class="menu">
-      <li><a routerLink="/pantalla-principal">Inicio</a></li>
-      <li><a routerLink="/pantpri">Productos</a></li>
-      <li><a routerLink="/gestion-ventas">Historial de ventas</a></li>
-      <li><a routerLink="/users">Ver Usuarios</a></li>
-      <li><a routerLink="/Form-users">Crear usuarios</a></li>
-      <li><a routerLink="/Form-products">Agregar productos</a></li>
-    </ul>
-  </nav>
-</div>
+<app-admin-bar></app-admin-bar>
 
 <h2>Perfil de Usuario</h2>
 <form (ngSubmit)="updateUsuario()" #userForm="ngForm">
